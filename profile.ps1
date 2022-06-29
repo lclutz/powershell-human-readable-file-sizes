@@ -1,7 +1,3 @@
-$CustomPowerShellDLLPath = "$PSScriptRoot\CustomPowerShell.dll"
-if ([System.IO.File]::Exists($CustomPowerShellDLLPath)) {
-    Import-Module $CustomPowerShellDLLPath
+if (Import-Module "$PSScriptRoot\CustomPowerShell.dll" -PassThru -Force) {
     Update-FormatData -PrependPath "$PSScriptRoot\FileSystem.format.ps1xml"
-} else {
-    Write-Warning "$CustomPowerShellDLLPath not found."
 }
