@@ -4,11 +4,15 @@
 
 ## Quick Start
 
-1. `csc /target:library CustomPowerShell.cs` to compile the custom format
+1. Install [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+   to get a C# compiler. At a minimum make sure that under "Individual
+   Components" the option `C# and Visual Basic Roslyn compilers` is checked.
+2. From a Native Tools Command Prompt run
+   `csc /target:library CustomPowerShell.cs` to compile the custom format
    function into a loadable dll.
-2. `.\launch.bat` to launch a powershell window with the custom profile
+3. `.\launch.bat` to launch a powershell window with the custom profile
    loaded.
-3. Run the `Get-ChildItem`.
+4. Run the `Get-ChildItem`.
 
 ## Installation
 
